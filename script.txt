@@ -1,0 +1,62 @@
+Import necessary functions from 'emotion-ai-copy.js'
+Initialize variables api_key, entries, and firstRun
+
+Async function getChatGPTAPIKey():
+    Fetch API key from 'https://orpheus.spiritualsworld.xyz/key?authkey=*LprL%EmvVv2*'
+    Store the key in api_key
+
+Async function changeTextWithChatGPT(change):
+    Get text from textarea, big, and slight elements
+    Create a body object with model, messages, and stream properties
+    Send a POST request to 'https://api.openai.com/v1/chat/completions' with the body
+    Read and process the response data to update big or slight elements accordingly
+
+Async function scrollSlightContainer():
+    Scroll the slight container to the bottom
+
+Async function scrollBigContainer():
+    Scroll the big container to the bottom
+
+Async function makeSelectionBoxVisible():
+    Display the select overlay
+
+Async function makeSelectionBoxInvisible():
+    Hide the select overlay
+
+Async function makeInstructionsOverlayInvisible():
+    Hide the instructions overlay
+
+Async function makeInstructionsOverlayVisible():
+    Display the instructions overlay
+
+Async function submitEntry(text, color):
+    Create FormData with text and color
+    Send a POST request to 'https://docs.google.com/forms/...' with the data
+    Hide the selection box
+
+Async function loadEntries():
+    Fetch data from 'https://docs.google.com/spreadsheets/...'
+    Parse the data and store entries
+
+Async function setUpEntries():
+    Clear the entries container
+    Load entries from the fetched data and display them in the container
+
+Function getColorFromEmotion(emotion, score):
+    Return a color based on the emotion and score
+
+Function putEntryIntoTextArea(i):
+    Replace text in the textarea with the selected entry
+    Set the background color based on the emotion
+    Hide the entries overlay after a timeout
+
+Async function handleSubmit():
+    Update original, big, and slight elements with generated text
+    Add event listeners for selecting versions
+    Show the selection box and generate alternate versions
+
+Functions orig(), slig(), larg():
+    Submit the text and emotion data from original, slight, or big versions
+
+Call getChatGPTAPIKey() at the beginning
+Add event listeners for submit, show entries, and other interactions

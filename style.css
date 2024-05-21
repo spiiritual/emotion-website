@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background: mintcream;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
+img:hover {
+  opacity: 50%;
+  transition: opacity 0.5s ease;
+}
+
+.container-textboxArea {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; 
+}
+
+#textarea {
+  display: flex;
+  font-size: 20px;
+  padding: 10px;
+  width: 1000px;
+  height: 60vh;
+  border: 3px solid #0132;
+  border-radius: 20px;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  transition: background-color 0.8s ease;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+  justify-content: space-evenly;
+}
+
+.buttons button {
+  background-color: #d5e7ec;
+  border: 3px solid rgba(0, 23, 68, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.buttons button:hover {
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.legend {
+  position: absolute;
+  width: 10%;
+  border: 3px solid #0132;
+  top: 80px;
+  left: 35px;
+}
+
+.legend h1 {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.legend .emotions {
+  text-align: center;
+  padding: 5px;
+}
+
+.select-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  display: none
+}
+
+.entries-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  display: none
+}
+
+.entries-container {
+  background-color: mintcream;
+  border-style: hidden;
+  border-radius: 10px;
+  height: 40em;
+  width: 60em;
+  padding: 20px;
+}
+
+.entries-body-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  height: 85%;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box
+}
+
+.entries-body {
+  height: 10em;
+  width: 15em;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.entries-body-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*
+.entries-body:hover .entries-body-text {
+  white-space: none;
+} */
+.select-container {
+  background-color: mintcream;
+  border-style: hidden;
+  border-radius: 10px;
+  height: 40em;
+  width: 60em;
+  padding: 20px
+}
+
+.options-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
+
+.version {
+  height: 35em;
+  width: 30em;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto
+}
+
+.blinking::after {
+  content: "▮";
+  animation: blink-1 0.6s infinite both;
+}
+
+.select-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-header img {
+  height: 50px;
+  width: 50px
+}
+
+.instructions-overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  display: none
+}
+
+.instructions-overlay-core {
+  background-color: mintcream;
+  border-style: hidden;
+  border-radius: 10px;
+  height: 40em;
+  width: 60em;
+  padding: 20px;
+}
+
+.instructions-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instructions-header img {
+  height: 50px;
+  width: 50px
+}
+
+.instructions-body {
+  display: flex;
+  flex-direction: column
+}
+
+#neutral {
+  background-color: rgba(211, 207, 205, 0.1);
+}
+
+#disgust {
+  background-color: rgba(104, 159, 56, 0.1);
+}
+
+#anger {
+  background-color: rgba(219, 68, 55, 0.1);
+}
+
+#fear {
+  background-color: rgba(185, 41, 185, 0.1);
+}
+
+#joy {
+  background-color: rgba(255,255,0,0.1);
+}
+#sadness {
+  background-color: rgba(173, 216, 230, 0.1);
+}
+
+#surprise {
+  background-color: rgba(255,165,0,0.1);
+}
+#exit {
+  cursor: pointer;
+}
+#instructionExit {
+  cursor: pointer;
+}
+
+#instruction {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.emotionClass {
+  animation-name: color-change;
+  animation-duration: 1s;
+}
+
+@keyframes color-change {
+  0% {
+    background: none;
+  }
+  100% {
+    background: none;
+  }
+}
+
+@keyframes blink-1 {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .legend {
+    width: 25%;
+    top: 45vh;
+    left: 10vw;
+  }
+  .container-textboxArea {
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+  }
+  #textarea {
+    position: relative;
+    left: 3%;
+    width: 90vw;
+    height: 30vh;
+    overflow-x: hidden;
+  }
+  .buttons {
+    position: relative;
+    flex-direction: column;
+    max-width: 25%;
+    left: 65vw;
+    margin: 0;
+    margin-top: 10vh;
+  }
+  .buttons button {
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    font-size: 20px;
+  }
+  .container-textboxArea {
+    top: 15px; 
+  }
+}
+@media only screen and (max-width: 550px) {
+  #instruction{
+    bottom: 10px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+  }
+  .buttons button {
+    font-size: 15px;
+  }
+  #textarea {
+    font-size: 17px;
+  }
+  .legend h1 {
+    font-size: 27px;
+  }
+}

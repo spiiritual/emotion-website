@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+  <p class="test"></p>
+
+  <div class="container-textboxArea">
+    <textarea disabled id='textarea' name='userInput' rows="10" cols="50"></textarea>
+    <div class="button-container">
+          <div class="buttons">
+      <button id="submit">Save Entry</button>
+      <button id="show">Show Past Entries</button>
+      <button id="delete">New Entry</button>
+      </div>
+      </div>
+  </div>
+
+
+
+  <div class="legend">
+    <h1>Legend</h1>
+    <div class="emotions">
+      <p id="anger" class="emotionClass">anger</p>
+      <p id="disgust" class="emotionClass">disgust</p>
+      <p id="joy" class="emotionClass">joy</p>
+      <p id="fear" class="emotionClass">fear</p>
+      <p id="neutral" class="emotionClass">neutral</p>
+      <p id="sadness" class="emotionClass">sadness</p>
+      <p id="surprise" class="emotionClass">surprise</p>
+    </div>
+  </div>
+
+  <div class="entries-overlay">
+    <div class="entries-container">
+      <div class="select-header">
+        <h2 id="select-direction-text">Loading...</h2>
+        <img src="icons8-x-100.png" id="entries-exit">
+      </div>
+      <div class="entries-body-container">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="select-overlay">
+    <div class="select-container">
+      <div class="select-header">
+        <h2 id="direction-text">Generating alternate versions...</h2>
+        <img src="icons8-x-100.png" id="exit">
+      </div>
+      <div class="options-container">
+        <div class="version">
+          <h3>Original</h3>
+          <p id="original">
+          </p>
+
+
+        </div>
+        <div class="version">
+          <h3>Slightly Changed</h3>
+          <p id="slight">
+          </p>
+
+
+        </div>
+        <div class="version">
+          <h3>Significantly Changed</h3>
+          <p id="big">
+          </p>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="instructions-overlay-bg">
+    <div class="instructions-overlay-core">
+      <div class="instructions-header">
+        <h2>Instructions for Usage</h2>
+        <img src="icons8-x-100.png" id="instructionExit">
+      </div>
+      <div class="instructions-body">
+        <div>
+        <p>Welcome to our mental health journaling app, named <b>Clear.</b> It is a website that is designed to help you process your emotions. Clear has three different sections of functionality: the main journaling area, saving an entry, and retrieving saved entries.</p>
+        </div>
+        <div>
+          <h3>Journaling Area</h3>
+          <p>The main screen that the user sees is the journaling area. It has a textbox that the user can type whatever they want in. As they type, the color of the textbox changes, corresponding to the emotion that the last 15 words of what they typed conveys. The stronger the emotion, the darker the background color of the textbox.</p>
+        </div>
+        <div>
+          <h3>Saving an Entry</h3>
+          <p>After you're done writing your journal entry, you can click the "Save Entry" button to save your journal entry for later viewing. When the button is pressed, a new menu appears that allows you to pick between saving the original text you wrote, a slightly modified version of the text, and a very modified version of the text. Once you click on a version, the menu disappears and it is saved to a Google Sheets spreadsheet for later viewing, along with the emotion that the chosen text conveys. The modification is done by ChatGPT.</p>
+        </div>
+        <div>
+          <h3>Retrieving Saved Entries</h3>
+          <p>You can see the entries that have been saved in the past by clicking the "Show Past Entries" button. This will bring up a menu with all of the past entries. You can click on an entry to load it into the main journaling area for viewing and editing. The color of each of the entries corresponds to the emotion of the entry itself.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <img src="icons8-question-mark-100.png" id="instruction">
+
+
+
+</body>
+<script src="script.js" type="module"></script>
+<script src="emotion-ai-copy.js" type="module"></script>
+
+</html>

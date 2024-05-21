@@ -1,0 +1,45 @@
+Initialize analyzer and lastEmotion variables
+
+Class Pipeline:
+    static task = "sentiment-analysis"
+    static model = "j-hartmann/emotion-english-distilroberta-base"
+    static instance = null
+
+    getInstance(progress_callback = null):
+        If instance is null:
+            Load the model with progress_callback
+        Return instance
+
+setup():
+    Get the textarea element
+    Set localModelPath to the model path
+    Load the model with a progress meter
+    Set placeholder text for textarea
+    Enable textarea
+
+analyzeTextEmotion():
+    Get the input text
+    Extract last 15 words
+    Analyze the emotions with the model
+    Set background color based on emotion
+
+getLastWords(input, amount):
+    Split input into sentences
+    Split sentences into words
+    Get the last 'amount' words
+    Return the last words
+
+analyzeEntireText(input):
+    Analyze emotions of the entire input text
+    Return the result
+
+setColorOfBackground(result):
+    Get the element to set background color
+    Get emotion and score from the result
+    Define fadedColors for different emotions
+    Reset previous emotion's background color
+    Set current emotion's background color
+    Update lastEmotion
+
+Set up the initial configuration
+Listen for keyup event to trigger emotion analysis
